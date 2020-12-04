@@ -1,0 +1,32 @@
+<html>
+<body>
+	<script>
+		var snd_one = new Audio("sound.mp3");
+	    function PlaySound(melody) {
+	        this.snd_one.play();
+	        this.snd_one = this.snd_one.cloneNode(true);
+	    }
+		document.addEventListener("keydown", function(event) {
+		  	if (event.keyCode == 49 || event.keyCode == 97) {
+		    	PlaySound('melody1');
+		  	}
+		  	console.log(event.keyCode);
+		});
+	</script>
+	<style>
+		.button {
+			font-size: 35px;
+			padding: 16px;
+		}
+	</style>
+</body>
+<body>
+	<button class="button" onmousedown="PlaySound('melody1')">
+		<img src="sound.png">
+		<br/>
+		按“1”鍵亦可播放
+		<br/>
+		press "1" to play
+	</button>
+</body>
+</html>
